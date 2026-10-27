@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zayvori.com/sitemap.xml

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zayvori — the to-do list that flows</title>
+  <meta name="description" content="Zayvori turns your to-do list into a map. Tasks branch, run side by side and merge back together, so you always know what to do next. Private, on your phone, coming soon to Android." />
+  <link rel="canonical" href="https://zayvori.com/" />
+  <meta name="theme-color" content="#6A4DFF" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Zayvori" />
+  <meta property="og:title" content="Zayvori — the to-do list that flows" />
+  <meta property="og:description" content="Map out a project, tick things off as you go, and always know what's next. Coming soon to Android." />
+  <meta property="og:url" content="https://zayvori.com/" />
+  <meta property="og:image" content="https://zayvori.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://zayvori.com/assets/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo" aria-label="Zayvori — home">
+        <img class="brandmark" src="assets/favicon.svg" alt="" width="34" height="34" />
+        <span class="nav__logo-text">Zayvori</span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#private">Privacy</a>
+        <a href="#download" class="btn btn--primary btn--sm">Coming soon</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero doodles">
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <span class="eyebrow">Coming soon · Android</span>
+          <h1>The to-do list that <span class="grad-text">flows</span>.</h1>
+          <p class="hero__lede">
+            Zayvori turns a project into a map of tasks that branch, run side by side and come back
+            together — then shows you exactly what's ready to do next.
+          </p>
+          <div class="hero__cta">
+            <a href="#download" class="btn btn--primary">Get notified</a>
+            <a href="#how-it-works" class="btn btn--ghost">See how it works</a>
+          </div>
+          <p class="hero__note"><span>No account</span><span>Works offline</span><span>Private to you</span></p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__glow"></div>
+          <!-- An illustration of the app's To do view, built in HTML so it stays crisp. -->
+          <div class="phone">
+            <div class="phone__screen">
+              <div class="app__head">
+                <span class="app__title">Kitchen renovation</span>
+              </div>
+              <div class="app__progress">
+                <div class="app__count">3 of 6<small>tasks completed</small></div>
+                <div class="app__bar"><i></i></div>
+              </div>
+              <div class="app__tabs"><span class="on">✓ To do</span><span>Map</span></div>
+
+              <div class="app__section">Ready now <span class="app__badge">2</span></div>
+              <div class="app__task"><span class="app__check"></span>Order worktops<span class="app__due app__due--today">Today 14:00</span></div>
+              <div class="app__task"><span class="app__check"></span>Book electrician<span class="app__due">Tomorrow</span></div>
+
+              <div class="app__section">Coming up</div>
+              <div class="app__task app__task--waiting"><span class="app__dot"></span><span>Fit the units<small>After “Order worktops”</small></span></div>
+
+              <div class="app__section">Done</div>
+              <div class="app__task app__task--done"><span class="app__check app__check--done"></span>Strip out old kitchen</div>
+
+              <div class="app__fab">＋ Task</div>
+            </div>
+          </div>
+          <div class="notif">
+            <div class="notif__top"><img src="assets/favicon.svg" alt="" />Zayvori · now</div>
+            <div class="notif__title">Due in an hour</div>
+            <div>“Order worktops” is due at 14:00 · Kitchen renovation</div>
+            <div class="notif__actions"><span>Mark complete</span><span>Dismiss</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head fade">
+          <span class="eyebrow">Features</span>
+          <h2>Plans have shapes. Your to-do list should too.</h2>
+          <p>Real projects aren't a straight line. Some jobs wait on others, some happen at the same time, and some only matter if something else falls through.</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="2"/><circle cx="5" cy="20" r="2"/><circle cx="19" cy="20" r="2"/><path d="M12 6v4M12 10c0 4-7 3-7 8M12 10c0 4 7 3 7 8"/></svg></div>
+            <h3>Map it out</h3>
+            <p>Lay tasks out as a flow from Start to Finish. Branch into jobs that run side by side, then bring them back together.</p>
+          </article>
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12.5l3 3 5-6"/></svg></div>
+            <h3>Always know what's next</h3>
+            <p>The To do view shows only what's ready right now, with what's coming up underneath. One tap ticks it off.</p>
+          </article>
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c0 8 8 6 8 12M20 4c0 8-8 6-8 12M12 16v4"/></svg></div>
+            <h3>Decide by doing</h3>
+            <p>Chasing two quotes? Set the next step to “any one is enough” and the first to come back moves you on. The other is set aside for you.</p>
+          </article>
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+            <h3>Reminders that help</h3>
+            <p>A nudge before something's due, another when it is, and a morning summary. Mark it complete right from the notification.</p>
+          </article>
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+            <h3>Progress you can see</h3>
+            <p>“3 of 6 tasks completed” and a bar that fills as you go. Finish the last one and the confetti's on us.</p>
+          </article>
+          <article class="feature fade">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="3"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <h3>Private by design</h3>
+            <p>Everything stays on your phone. No account, no sign-up, nothing sent to a server. It works without a signal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP BAND -->
+    <section class="section mapband">
+      <div class="container mapband__inner">
+        <div class="fade">
+          <span class="eyebrow">The map</span>
+          <h2>See the whole job. Then just do the next bit.</h2>
+          <p>Every workflow has a map. Green is done, the glowing task is ready, and anything you no longer need quietly steps aside.</p>
+          <ul class="mapband__list">
+            <li><span><b>Branch and merge.</b> Run jobs side by side and join them back up.</span></li>
+            <li><span><b>Finish all, or any one.</b> Choose whether a step waits for everything before it, or just the first.</span></li>
+            <li><span><b>Build as you think.</b> Add the next task, one alongside, or slot one in between. It lays itself out.</span></li>
+          </ul>
+        </div>
+
+        <div class="mapband__art fade" aria-hidden="true">
+          <!-- A workflow map in the app's dark theme. -->
+          <svg viewBox="0 0 440 540" font-family="Space Grotesk, system-ui, sans-serif">
+            <defs>
+              <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+                <feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#8A73FF" flood-opacity=".55"/>
+              </filter>
+            </defs>
+            <g fill="none" stroke-width="3" stroke-linecap="round">
+              <path d="M220 72 V114" stroke="#26D39B"/>
+              <path d="M220 172 C220 202 115 196 115 224" stroke="#26D39B"/>
+              <path d="M220 172 C220 202 325 196 325 224" stroke="#26D39B"/>
+              <path d="M115 282 C115 312 220 306 220 334" stroke="#26D39B"/>
+              <path d="M325 282 C325 312 220 306 220 334" stroke="#4B4B66" stroke-dasharray="6 6"/>
+              <path d="M220 392 V444" stroke="#9C88FF"/>
+            </g>
+            <g fill="#26D39B">
+              <path d="M220 120 l-6 -9 h12 z"/><path d="M115 230 l-6 -9 h12 z"/><path d="M325 230 l-6 -9 h12 z"/>
+              <path d="M220 340 l-6 -9 h12 z"/>
+            </g>
+            <path d="M220 450 l-6 -9 h12 z" fill="#9C88FF"/>
+
+            <!-- Start -->
+            <rect x="145" y="20" width="150" height="52" rx="26" fill="#26D39B"/>
+            <text x="220" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#04261B">✓ Start</text>
+            <!-- Done -->
+            <rect x="145" y="120" width="150" height="52" rx="14" fill="#26D39B"/>
+            <text x="220" y="151" text-anchor="middle" font-size="15" font-weight="600" fill="#04261B">✓ Measure up</text>
+            <!-- Branch: one done, one set aside -->
+            <rect x="40" y="230" width="150" height="52" rx="14" fill="#26D39B"/>
+            <text x="115" y="261" text-anchor="middle" font-size="15" font-weight="600" fill="#04261B">✓ Quote from Sam</text>
+            <rect x="250" y="230" width="150" height="52" rx="14" fill="#1C1C29" stroke="#4B4B66" stroke-width="2" stroke-dasharray="6 5"/>
+            <text x="325" y="253" text-anchor="middle" font-size="14" font-weight="600" fill="#8484A0" text-decoration="line-through">Quote from Ali</text>
+            <text x="325" y="272" text-anchor="middle" font-size="11" font-weight="700" fill="#8484A0">Not needed</text>
+            <!-- Ready (glowing) -->
+            <rect x="145" y="340" width="150" height="52" rx="14" fill="#241E4A" stroke="#9C88FF" stroke-width="3" filter="url(#glow)"/>
+            <text x="220" y="371" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Pick a builder</text>
+            <rect x="248" y="330" width="58" height="20" rx="10" fill="#8A73FF"/>
+            <text x="277" y="344" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">any one</text>
+            <!-- Finish -->
+            <rect x="145" y="450" width="150" height="52" rx="26" fill="#171724" stroke="#4B4B66" stroke-width="2"/>
+            <text x="220" y="482" text-anchor="middle" font-size="18" font-weight="700" fill="#A0A0B8">⚑ Finish</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section doodles" id="how-it-works">
+      <div class="container">
+        <div class="section__head fade">
+          <span class="eyebrow">How it works</span>
+          <h2>From plan to done in three steps</h2>
+        </div>
+        <div class="steps">
+          <div class="step fade">
+            <h3>Plan it</h3>
+            <p>Name a workflow and add tasks. Add the next one, one alongside, or connect to something you've already got. Give anything a due date.</p>
+          </div>
+          <div class="step fade">
+            <h3>Begin</h3>
+            <p>Tap Begin and Zayvori works out what's ready. Your To do view fills with just the things you can do right now.</p>
+          </div>
+          <div class="step fade">
+            <h3>Tick it off</h3>
+            <p>Tick tasks as you go, in the app or from a reminder. What's next unlocks by itself, until the last tick finishes the job.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVATE -->
+    <section class="section private" id="private">
+      <div class="container">
+        <div class="private__card fade">
+          <span class="eyebrow">Private</span>
+          <h2>Your plans stay on your phone</h2>
+          <p>There's no account to make and no server holding your tasks. Zayvori keeps everything on your device, so it works anywhere — and nobody else ever sees it.</p>
+          <div class="private__points">
+            <span>✓ No account</span><span>✓ No tracking</span><span>✓ No ads</span><span>✓ Works offline</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="section download" id="download">
+      <div class="container">
+        <div class="download__card fade">
+          <img src="assets/favicon.svg" alt="" width="76" height="76" />
+          <h2>Coming soon to Android</h2>
+          <p>Zayvori is in final testing. Want to hear when it's out, or try it early?</p>
+          <a class="btn" href="mailto:hello@zayvori.com?subject=Tell%20me%20when%20Zayvori%20is%20out">Email us to get notified</a>
+          <span class="download__soon">We'll only use your email to reply. No mailing list.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="/" class="nav__logo" aria-label="Zayvori — home">
+          <img class="brandmark" src="assets/favicon.svg" alt="" width="34" height="34" />
+          <span class="nav__logo-text">Zayvori</span>
+        </a>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="mailto:hello@zayvori.com">hello@zayvori.com</a>
+        </nav>
+      </div>
+      <p class="footer__bottom">© 2026 Zayvori. Made in the UK.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
