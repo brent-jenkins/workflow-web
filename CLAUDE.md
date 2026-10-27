@@ -43,9 +43,17 @@ The site makes no third-party requests, which is what lets the privacy policy be
 
 ## Deployment
 
-Intended for **GitHub Pages** (free, handles the domain and TLS): enable Pages on `main` in the repo settings; `CNAME` sets `zayvori.com`.
+**GitHub Pages** (handles the domain and TLS), deploying `main` from the repo root; `CNAME` sets `zayvori.com`. Pages is free only for **public** repos (Damson Kitchen's `recipe-web` is public); a private repo needs GitHub Pro.
 
-**zayvori.com currently serves the finance research tool** (behind Cloudflare). Before this site can go live there, that tool moves off the domain and DNS points at GitHub Pages (four `A` records for the apex plus `www` CNAME to `brent-jenkins.github.io`). If Cloudflare stays in front as a proxy, add Cloudflare to the privacy policy's "This website" section — it then also processes visitors' IP addresses.
+**History:** zayvori.com previously served a static page for the investment research project from the VM (`root@204.168.242.186`, Caddy, deployed by a webhook from the `investment-web` repo). That was **decommissioned on 2026-10-27**: the `zayvori.com` / `www.zayvori.com` Caddy blocks, `/var/www/zayvori.com`, `/root/zayvori-web` and `zayvori-web-webhook.service` were removed. Everything is backed up on the VM at `/root/zayvori-web-decommission-20261027.tar.gz`. The `investment-web` repo is now orphaned; its GitHub webhook will fail and can be deleted.
+
+**cfd.zayvori.com stays on the VM, unchanged.** It has its own DNS record and its own Caddy-managed certificate; moving the apex doesn't touch it. Keep its Cloudflare record **proxied (orange cloud)**: the VM's firewall only accepts 80/443 from Cloudflare's ranges.
+
+**DNS for this site (Cloudflare, zone zayvori.com):**
+- Apex `zayvori.com`: four `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (and optionally `AAAA` → `2606:50c0:8000::153` … `8003::153`).
+- `www`: `CNAME` → `brent-jenkins.github.io`.
+- Both **DNS only (grey cloud)**, so GitHub can issue the certificate and the privacy policy's "hosted on GitHub Pages" stays the whole story. If they're ever proxied, add Cloudflare to the privacy policy, since it then processes visitors' IP addresses.
+- Then in the repo: Settings → Pages → custom domain `zayvori.com`, wait for the certificate, tick **Enforce HTTPS**.
 
 ## Previewing locally
 
