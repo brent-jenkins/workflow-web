@@ -51,8 +51,8 @@ The site makes no third-party requests, which is what lets the privacy policy be
 
 **DNS for this site (Cloudflare, zone zayvori.com):**
 - Apex `zayvori.com`: four `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (and optionally `AAAA` → `2606:50c0:8000::153` … `8003::153`).
-- `www`: `CNAME` → `brent-jenkins.github.io`.
-- Both **DNS only (grey cloud)**, so GitHub can issue the certificate and the privacy policy's "hosted on GitHub Pages" stays the whole story. If they're ever proxied, add Cloudflare to the privacy policy, since it then processes visitors' IP addresses.
+- **The site lives at `zayvori.com` only** (the `CNAME` file and every canonical URL say so). `www` is optional: a `CNAME` → `brent-jenkins.github.io` makes GitHub redirect `www.zayvori.com` to `zayvori.com`; with no `www` record, `www` simply doesn't resolve.
+- All of these **DNS only (grey cloud)**, so GitHub can issue the certificate and the privacy policy's "hosted on GitHub Pages" stays the whole story. If they're ever proxied, add Cloudflare to the privacy policy, since it then processes visitors' IP addresses.
 - Then in the repo: Settings → Pages → custom domain `zayvori.com`, wait for the certificate, tick **Enforce HTTPS**.
 
 ## Previewing locally
