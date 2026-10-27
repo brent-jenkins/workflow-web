@@ -6,7 +6,8 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 
 | File | Role |
 |------|------|
-| `index.html` | Home: hero (with an HTML mock-up of the To do view and a reminder notification), features, the map band (an inline SVG workflow map in the app's dark theme), how it works, privacy, "coming soon" |
+| `index.html` | Home, in selling order: hero (outcome-first headline, real map screenshot, reminder notification), **the difference** (a plain list beside the To do view — the core pitch), the map band (dark-theme map screenshot), templates, smaller features, how it works, privacy and backup, "coming soon" |
+| `assets/screens/` | Real app screenshots, made by `workflow-app/scripts/make-store-assets.js --web assets/screens` from the store captures. Retake there, re-export here |
 | `privacy.html` | Privacy Policy. **Google Play requires its URL** for the listing |
 | `404.html` | GitHub Pages serves it for any missing URL, at any depth — so it uses absolute `/` paths |
 | `styles.css` | All styles. Brand tokens at the top as CSS custom properties |
@@ -21,14 +22,16 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 - **Tokens are the app's exact values** (`workflow-app/src/theme.ts`): violet `#6A4DFF` → magenta `#C34DFF` gradient, mint `#2BD99F` ticks, done `#0FA97A`, ink `#12121F`, background `#F4F4F9`, dark `#0B0B13`. Change the app, change these.
 - **The mark** (a white Z-shaped route between two mint "done" ticks) is the same geometry as the app icon (`workflow-app/scripts/make-icons.js`) and in-app `BrandMark.tsx`. Change one, change all.
 - **Type:** Space Grotesk for names, headings and numbers; Inter for body. Self-hosted — never load from `fonts.googleapis.com` (it would send visitors' IPs to Google and break the privacy policy's no-third-parties line).
-- **Ration the colour**, as the app does: gradient on primary buttons and the one highlighted word, violet for eyebrows and links, everything else neutral. The faint doodle pattern (`.doodles`) echoes the app's background pattern.
-- **Voice:** plain, upbeat, practical. UK English. Talk about getting things done and knowing what's next — not productivity jargon. Use the app's own words for concepts (Ready, Waiting, Not needed, "any one is enough", Finish) — see `workflow-app/src/labels.ts`.
+- **Ration the color**, as the app does: gradient on primary buttons and the one highlighted word, violet for eyebrows and links, everything else neutral. The faint doodle pattern (`.doodles`) echoes the app's background pattern.
+- **Voice:** plain, upbeat, practical. **US English**, matching the app and the Play listing. Talk about getting things done and knowing what's next — not productivity jargon. Use the app's own words for concepts (Ready, Waiting, Not needed, "any one is enough", Finish) — see `workflow-app/src/labels.ts`.
 
 ## What the app does (keep copy aligned)
 
-Workflows from Start to Finish; tasks branch, run side by side and merge; "finish all of them" or "any one is enough" before a step; unneeded tasks are set aside automatically; **To do** view (ready now / coming up / done) and **Map** view; one-tap complete with Undo; due dates; reminders (due soon, due now, morning summary) with **Mark complete / Dismiss** on the notification; progress "x of y"; confetti on finish; light/dark/system theme; background pattern. **Everything on the phone: no account, no server, no sync, no analytics.**
+Workflows from Start to Finish; tasks branch, run side by side and merge; "finish all of them" or "any one is enough" before a step; unneeded tasks are set aside automatically; **To do** view (ready now / coming up / done) and **Map** view; one-tap complete with Undo; due dates; reminders (due soon, due now, morning summary) with **Mark complete / Dismiss** on the notification; progress "x of y"; confetti on finish; light/dark/system theme; background pattern; **templates** (four starters, save any workflow as one, due dates follow the start date); duplicate / run again; **backup to a file** the user keeps anywhere, and restore. **Everything on the phone: no account, no server, no sync, no analytics.**
 
-Not features (don't claim): accounts, sync/backup to a cloud, sharing or collaboration, templates, repeating/looping tasks, iOS.
+Not features (don't claim): accounts, automatic cloud sync, sharing or collaboration, repeating/looping tasks, iOS.
+
+**Selling, not describing:** lead with the outcome (only what you can do today) and a recognizable situation (moving, remodeling, events); show the before/after; mechanism words ("branch", "merge") come after.
 
 ## No cookies, no analytics, no third parties
 
@@ -37,7 +40,6 @@ The site makes no third-party requests, which is what lets the privacy policy be
 ## Launch state and open items
 
 - **Pre-launch.** The app isn't on Google Play yet: the CTA is "Coming soon" with an email link. When it launches, swap the nav button, hero CTA and download card for the Play link (`https://play.google.com/store/apps/details?id=com.zayvori.workflow`).
-- **The mock-up and map are illustrations, not screenshots.** Swap in real screenshots once there's a tidy demo workflow to capture.
 - **`hello@zayvori.com` must exist** before launch — it's the contact in the privacy policy and the CTA.
 - **Privacy policy "Who we are"** assumes the same setup as Damson Kitchen: an independent UK developer trading as Zayvori, no company. Confirm before submitting to Play. Not reviewed by a lawyer.
 

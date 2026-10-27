@@ -149,48 +149,20 @@ p { margin: 0; }
   .hero__cta, .hero__note { justify-content: center; }
 }
 
-/* ---------- Phone mock-up: the app's To do view, drawn in HTML ---------- */
+/* ---------- Phone frames around real screenshots (assets/screens, made by
+   workflow-app/scripts/make-store-assets.js --web) ---------- */
 .phone {
   position: relative; z-index: 1;
-  width: 330px; padding: 12px; border-radius: 44px;
-  text-align: left; /* the mobile hero centres its text; the app's screen doesn't */
+  width: 330px; padding: 10px; border-radius: 44px;
   background: #1B1B28; box-shadow: var(--shadow-lg);
 }
-.phone__screen { border-radius: 34px; overflow: hidden; background: var(--bg); padding: 22px 16px 26px; min-height: 560px; }
-.app__head { display: flex; align-items: center; justify-content: space-between; }
-.app__title { font-family: var(--display); font-weight: 700; font-size: 20px; }
-.app__progress { margin-top: 14px; }
-.app__count { font-family: var(--display); font-weight: 700; font-size: 18px; }
-.app__count small { font-family: var(--body); font-weight: 400; font-size: 12px; color: var(--muted); margin-left: 4px; }
-.app__bar { height: 6px; border-radius: 3px; background: #E6E6F0; margin-top: 6px; overflow: hidden; }
-.app__bar i { display: block; height: 100%; width: 50%; border-radius: 3px; background: linear-gradient(90deg, #FF8A3D, #FF3D7F); }
-.app__tabs { display: flex; background: #ECECF4; border-radius: 999px; padding: 3px; margin-top: 14px; }
-.app__tabs span { flex: 1; text-align: center; font-size: 12px; font-weight: 600; color: var(--muted); padding: 7px 0; border-radius: 999px; }
-.app__tabs .on { background: #fff; color: var(--ink); font-family: var(--display); font-weight: 700; box-shadow: 0 2px 6px rgba(42,31,102,.08); }
-.app__section { font-family: var(--display); font-weight: 700; font-size: 14px; margin: 18px 2px 8px; display: flex; align-items: center; gap: 6px; }
-.app__badge { font-size: 10px; font-weight: 800; padding: 1px 7px; border-radius: 999px; background: var(--violet-soft); color: var(--violet); }
-.app__task {
-  display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 16px;
-  padding: 11px 12px; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(42,31,102,.06);
-  font-family: var(--display); font-weight: 600; font-size: 14px;
-}
-.app__check { width: 20px; height: 20px; flex: none; border-radius: 50%; border: 2.5px solid var(--violet); }
-.app__check--done { border-color: var(--done); background: var(--done) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat; }
-.app__task--done { color: var(--muted); text-decoration: line-through; }
-.app__due { margin-left: auto; font-family: var(--body); font-size: 10px; font-weight: 600; color: var(--muted); background: #F0F0F7; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
-.app__due--today { color: #B26B00; background: #FFF1DD; }
-.app__task--waiting { background: transparent; box-shadow: none; border: 1.5px dashed #DCDCE8; color: var(--muted); font-weight: 500; }
-.app__task--waiting small { display: block; font-family: var(--body); font-size: 10px; font-weight: 400; }
-.app__dot { width: 9px; height: 9px; flex: none; border-radius: 50%; border: 2px solid #B3B3C6; margin: 0 5px; }
-.app__fab {
-  margin: 16px 0 0 auto; width: max-content; padding: 9px 16px; border-radius: 999px;
-  background: var(--grad); color: #fff; font-family: var(--display); font-weight: 700; font-size: 13px;
-  box-shadow: 0 6px 16px rgba(106,77,255,.35);
-}
+.phone img { width: 100%; height: auto; border-radius: 34px; }
+.phone--small { width: 280px; margin: 0 auto; }
+.phone--night { box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08); }
 
 /* Floating "Mark complete" notification beside the phone. */
 .notif {
-  /* Overlaps only the phone's bottom edge, so the To do rows stay readable. */
+  /* Overlaps only the phone's bottom edge, so the map stays readable. */
   position: absolute; z-index: 2; right: -24px; bottom: -40px; width: 250px;
   background: rgba(255,255,255,0.96); border-radius: 20px; padding: 12px 14px;
   box-shadow: var(--shadow-lg); font-size: 12px; text-align: left;
@@ -203,6 +175,42 @@ p { margin: 0; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @media (max-width: 900px) { .hero__visual { padding-bottom: 40px; } }
 @media (max-width: 420px) { .phone { width: 300px; } .notif { right: 0; bottom: 0; width: 220px; } }
+
+/* ---------- The difference: a plain list beside the To do view ---------- */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.compare__side {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px 30px; display: flex; flex-direction: column; gap: 20px; height: 100%;
+}
+.compare__side h3 { font-size: 22px; }
+.compare__side--us { border-color: var(--violet); box-shadow: 0 16px 40px rgba(106, 77, 255, 0.14); }
+.plainlist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.plainlist li {
+  display: flex; align-items: center; gap: 12px; padding: 13px 14px;
+  border: 1.5px solid var(--border); border-radius: 14px; font-weight: 500;
+}
+.plainlist li::before { content: ''; width: 18px; height: 18px; flex: none; border-radius: 5px; border: 2px solid #B3B3C6; }
+.compare__verdict { color: var(--muted); font-size: 16px; margin-top: auto; }
+.compare__verdict--bad { color: #8A4A4A; }
+@media (max-width: 800px) { .compare { grid-template-columns: 1fr; } }
+
+/* ---------- Templates ---------- */
+.templates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.tpl {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 26px 24px; display: flex; flex-direction: column; gap: 8px;
+}
+.tpl::before {
+  content: ''; width: 44px; height: 44px; border-radius: 14px; margin-bottom: 8px; background: var(--grad);
+}
+.tpl:nth-child(2)::before { background: linear-gradient(120deg, #8A4DFF, #FF4DB8); }
+.tpl:nth-child(3)::before { background: linear-gradient(120deg, #B57BFF, #4DB8FF); }
+.tpl:nth-child(4)::before { background: linear-gradient(120deg, #1FB6FF, #3D6BFF); }
+.tpl h3 { font-size: 19px; }
+.tpl p { color: var(--muted); font-size: 15px; }
+.tpl span { margin-top: auto; padding-top: 6px; font-size: 13px; font-weight: 600; color: var(--violet); }
+@media (max-width: 900px) { .templates { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .templates { grid-template-columns: 1fr; } }
 
 /* ---------- Features ---------- */
 .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -239,7 +247,6 @@ p { margin: 0; }
   background: var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2304261B' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat;
 }
 .mapband__art { display: flex; justify-content: center; }
-.mapband__art svg { width: 100%; max-width: 440px; height: auto; }
 @media (max-width: 900px) { .mapband__inner { grid-template-columns: 1fr; } .mapband__art { order: -1; } }
 
 /* ---------- Steps ---------- */
