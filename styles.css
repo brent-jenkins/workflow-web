@@ -194,6 +194,19 @@ p { margin: 0; }
 .compare__verdict--bad { color: #8A4A4A; }
 @media (max-width: 800px) { .compare { grid-template-columns: 1fr; } }
 
+/* ---------- Describe it: copy beside two overlapping phones ---------- */
+.describe { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.describe h2 { font-size: clamp(30px, 4vw, 42px); margin-top: 10px; }
+.describe__copy p { color: var(--muted); margin-top: 16px; font-size: 18px; }
+.describe__copy .describe__note { font-size: 15px; }
+.describe__shots { display: flex; justify-content: center; }
+.describe__shots .phone--small { width: 250px; margin: 0; }
+.describe__second { margin: 64px 0 0 -40px !important; }
+@media (max-width: 900px) {
+  .describe { grid-template-columns: 1fr; text-align: center; }
+  .describe__shots .phone--small { width: 200px; }
+}
+
 /* ---------- Templates ---------- */
 .templates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .tpl {
