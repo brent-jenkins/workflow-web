@@ -29,6 +29,8 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 
 Workflows from Start to Finish; tasks branch, run side by side and merge; "finish all of them" or "any one is enough" before a step; unneeded tasks are set aside automatically; **To do** view (ready now / coming up / done) and **Map** view; one-tap complete with Undo; due dates; reminders (due soon, due now, morning summary) with **Mark complete / Dismiss** on the notification; progress "x of y"; confetti on finish; light/dark/system theme; background pattern; **templates** (four starters, save any workflow as one, due dates follow the start date); duplicate / run again; **backup to a file** the user keeps anywhere, and restore. **Everything on the phone: no account, no server, no sync, no analytics.**
 
+**Describe it** (when shipped): type or say a plan and Claude drafts the workflow; only the typed description leaves the phone (privacy.html → Describe it). Keep any privacy claim on the site consistent with that.
+
 Not features (don't claim): accounts, automatic cloud sync, sharing or collaboration, repeating/looping tasks, iOS.
 
 **Selling, not describing:** lead with the outcome (only what you can do today) and a recognizable situation (moving, remodeling, events); show the before/after; mechanism words ("branch", "merge") come after.
