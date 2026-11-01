@@ -331,6 +331,16 @@ p { margin: 0; }
   color: var(--ink) !important; font-weight: 500; margin-bottom: 8px;
 }
 
+/* Help page: the contents list at the top, in two columns where there's room. */
+.help__toc {
+  list-style: none; padding: 0 !important; margin: 20px 0 8px !important;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px;
+}
+.help__toc a { color: var(--violet); font-weight: 600; text-decoration: none; }
+.help__toc a:hover { text-decoration: underline; }
+.legal__body h2[id] { scroll-margin-top: 90px; }
+@media (max-width: 600px) { .help__toc { grid-template-columns: 1fr; } }
+
 /* ---------- 404 ---------- */
 .notfound { min-height: 60vh; display: grid; place-items: center; text-align: center; padding: 80px 24px; }
 .notfound img { width: 88px; margin: 0 auto 24px; border-radius: 22px; }
