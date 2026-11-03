@@ -24,7 +24,7 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 - **The mark** (a white Z-shaped route between two mint "done" ticks) is the same geometry as the app icon (`workflow-app/scripts/make-icons.js`) and in-app `BrandMark.tsx`. Change one, change all.
 - **Type:** Space Grotesk for names, headings and numbers; Inter for body. Self-hosted — never load from `fonts.googleapis.com` (it would send visitors' IPs to Google and break the privacy policy's no-third-parties line).
 - **Ration the color**, as the app does: gradient on primary buttons and the one highlighted word, violet for eyebrows and links, everything else neutral. The faint doodle pattern (`.doodles`) echoes the app's background pattern.
-- **Voice:** plain, upbeat, practical. **US English**, matching the app and the Play listing, in words as well as spelling: check off (not tick), come around (not round), a move (not moving house). Talk about getting things done and knowing what's next — not productivity jargon. Use the app's own words for concepts (Ready, Waiting, Not needed, "any one is enough", Finish) — see `workflow-app/src/labels.ts`.
+- **Voice:** plain, upbeat, practical. **US English**, matching the app and the Play listing, in words as well as spelling: check off (not tick), come around (not round), a move (not moving house). A workflow is called a **plan** everywhere people read it (the app's Plans tab, "New plan"), since November 2026. Talk about getting things done and knowing what's next — not productivity jargon. Use the app's own words for concepts (Ready, Waiting, Not needed, "any one is enough", Finish) — see `workflow-app/src/labels.ts`.
 
 ## What the app does (keep copy aligned)
 
