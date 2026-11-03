@@ -208,7 +208,7 @@ p { margin: 0; }
 }
 
 /* ---------- Templates ---------- */
-.templates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.templates { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .tpl {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 26px 24px; display: flex; flex-direction: column; gap: 8px;
@@ -222,6 +222,7 @@ p { margin: 0; }
 .tpl h3 { font-size: 19px; }
 .tpl p { color: var(--muted); font-size: 15px; }
 .tpl span { margin-top: auto; padding-top: 6px; font-size: 13px; font-weight: 600; color: var(--violet); }
+@media (max-width: 1060px) { .templates { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 900px) { .templates { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .templates { grid-template-columns: 1fr; } }
 
