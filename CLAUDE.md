@@ -45,7 +45,7 @@ The site makes no third-party requests, which is what lets the privacy policy be
 ## Launch state and open items
 
 - **Pre-launch.** The app isn't on Google Play yet: the CTA is "Coming soon" with an email link. When it launches, swap the nav button, hero CTA and download card for the Play link (`https://play.google.com/store/apps/details?id=com.zayvori.workflow`).
-- **`hello@zayvori.com` must exist** before launch — it's the contact in the privacy policy and the CTA.
+- **`support@zayvori.com` must exist** — it's the contact in the privacy policy, the help page and the CTA. It replaced hello@zayvori.com, which stopped working, in November 2026.
 - **Privacy policy "Who we are"** assumes the same setup as Damson Kitchen: an independent UK developer trading as Zayvori, no company. Confirm before submitting to Play. Not reviewed by a lawyer.
 
 ## Deployment
