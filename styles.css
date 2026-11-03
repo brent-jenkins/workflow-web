@@ -239,6 +239,15 @@ p { margin: 0; }
 .feature h3 { font-size: 20px; }
 .feature p { color: var(--muted); margin-top: 8px; font-size: 16px; }
 @media (max-width: 900px) { .features__grid { grid-template-columns: 1fr 1fr; } }
+/* Premium: the same cards, four across, then the price. */
+.premium { background: linear-gradient(180deg, var(--violet-soft), transparent 70%); }
+.premium__grid { grid-template-columns: repeat(4, 1fr); }
+.premium__price { text-align: center; max-width: 640px; margin: 36px auto 0; color: var(--muted); }
+.premium__trial {
+  display: inline-block; color: #FFFFFF; font-weight: 700; padding: 8px 18px; border-radius: 999px; margin-bottom: 12px;
+  background: linear-gradient(90deg, #6A4DFF, #C34DFF);
+}
+@media (max-width: 1000px) { .premium__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .features__grid { grid-template-columns: 1fr; } }
 
 /* ---------- Map band (dark) ---------- */
