@@ -6,7 +6,7 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 
 | File | Role |
 |------|------|
-| `index.html` | Home, in selling order: hero (outcome-first headline, real map screenshot, reminder notification), **the difference** (a plain list beside the To do view — the core pitch), the map band (dark-theme map screenshot), templates, smaller features, how it works, privacy and backup, "coming soon" |
+| `index.html` | Home, in selling order: hero (outcome-first headline, real map screenshot, reminder notification), **the difference** (a plain list beside the To do view — the core pitch), the map band (dark-theme map screenshot), Today, templates, then the AI: Describe it leading into Zayvori Premium (after the free core, as a helper rather than the headline, matching the Play listing), smaller features, how it works, privacy and backup, "coming soon" |
 | `assets/screens/` | Real app screenshots, made by `workflow-app/scripts/make-store-assets.js --web assets/screens` from the store captures. Retake there, re-export here |
 | `help.html` | Help and guide: one page on the parts worth explaining (getting started, task states and All/Any, Today/To do/Map, dates and reminders, templates and sending, repeating, widget, backups). Linked from the nav, the footer and the app's Settings → Help and guide. Keep it in step with the app; use the app's own words (`workflow-app/src/labels.ts`) |
 | `privacy.html` | Privacy Policy. **Google Play requires its URL** for the listing |
