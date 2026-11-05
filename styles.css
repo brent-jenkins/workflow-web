@@ -67,10 +67,10 @@ p { margin: 0; }
   color: var(--violet);
 }
 .section { padding: 96px 0; }
-.section__head { max-width: 640px; margin: 0 auto 56px; text-align: center; }
+.section__head { max-width: 720px; margin: 0 0 48px; }
 .section__head h2 { font-size: clamp(30px, 4vw, 42px); margin-top: 10px; }
 .section__head p { color: var(--muted); margin-top: 14px; font-size: 18px; }
-.grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hl { color: var(--violet); }
 
 /* Faint app-themed doodles behind light bands, like the app's background pattern. */
 .doodles {
@@ -213,12 +213,6 @@ p { margin: 0; }
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 26px 24px; display: flex; flex-direction: column; gap: 8px;
 }
-.tpl::before {
-  content: ''; width: 44px; height: 44px; border-radius: 14px; margin-bottom: 8px; background: var(--grad);
-}
-.tpl:nth-child(2)::before { background: linear-gradient(120deg, #8A4DFF, #FF4DB8); }
-.tpl:nth-child(3)::before { background: linear-gradient(120deg, #B57BFF, #4DB8FF); }
-.tpl:nth-child(4)::before { background: linear-gradient(120deg, #1FB6FF, #3D6BFF); }
 .tpl h3 { font-size: 19px; }
 .tpl p { color: var(--muted); font-size: 15px; }
 .tpl span { margin-top: auto; padding-top: 6px; font-size: 13px; font-weight: 600; color: var(--violet); }
@@ -240,6 +234,12 @@ p { margin: 0; }
 .feature h3 { font-size: 20px; }
 .feature p { color: var(--muted); margin-top: 8px; font-size: 16px; }
 @media (max-width: 900px) { .features__grid { grid-template-columns: 1fr 1fr; } }
+/* The little things: a plain two-column list, no cards or icons. */
+.also { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; }
+.also div { border-top: 1px solid var(--border); padding-top: 18px; }
+.also dt { font-family: var(--display); font-weight: 700; font-size: 19px; }
+.also dd { color: var(--muted); margin: 6px 0 0; font-size: 16px; }
+@media (max-width: 700px) { .also { grid-template-columns: 1fr; } }
 /* Premium: the same cards, four across, then the price. */
 .premium { background: linear-gradient(180deg, var(--violet-soft), transparent 70%); }
 .premium__grid { grid-template-columns: repeat(4, 1fr); }
@@ -272,17 +272,6 @@ p { margin: 0; }
 .mapband__art { display: flex; justify-content: center; }
 @media (max-width: 900px) { .mapband__inner { grid-template-columns: 1fr; } .mapband__art { order: -1; } }
 
-/* ---------- Steps ---------- */
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: step; }
-.step { position: relative; background: var(--surface); border-radius: var(--radius); padding: 30px 28px; border: 1px solid var(--border); }
-.step::before {
-  counter-increment: step; content: counter(step);
-  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
-  background: var(--grad); color: #fff; font-family: var(--display); font-weight: 700; margin-bottom: 18px;
-}
-.step h3 { font-size: 20px; }
-.step p { color: var(--muted); margin-top: 8px; font-size: 16px; }
-@media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
 
 /* ---------- Private band ---------- */
 .private { text-align: center; }
@@ -357,12 +346,8 @@ p { margin: 0; }
 .notfound h1 { font-size: 40px; }
 .notfound p { color: var(--muted); margin: 12px 0 28px; }
 
-/* ---------- Scroll fade-in (script.js adds .in) ---------- */
-.fade { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-.fade.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .fade { opacity: 1; transform: none; transition: none; }
   .notif { animation: none; }
 }
 

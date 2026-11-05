@@ -1,4 +1,4 @@
-// Mobile menu, the nav's border once scrolled, and gentle fade-ins.
+// Mobile menu and the nav's border once scrolled.
 // No tracking and nothing stored — see privacy.html.
 (function () {
   var nav = document.querySelector('.nav');
@@ -25,15 +25,4 @@
     onScroll();
   }
 
-  var fades = document.querySelectorAll('.fade');
-  if (!('IntersectionObserver' in window)) {
-    fades.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -60px 0px' });
-  fades.forEach(function (el) { io.observe(el); });
 })();

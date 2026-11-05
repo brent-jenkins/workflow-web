@@ -6,13 +6,13 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 
 | File | Role |
 |------|------|
-| `index.html` | Home, in selling order: hero (outcome-first headline, real map screenshot, reminder notification), **the difference** (a plain list beside the To do view — the core pitch), the map band (dark-theme map screenshot), Today, templates, then the AI: Describe it leading into Zayvori Premium (after the free core, as a helper rather than the headline, matching the Play listing), smaller features, how it works, privacy and backup, "coming soon" |
+| `index.html` | Home, in selling order: hero (outcome-first headline, real map screenshot, reminder notification), **the difference** (a plain list beside the To do view — the core pitch), the map band (dark-theme map screenshot), Today, templates, then the AI: Describe it leading into Zayvori Premium (after the free core, as a helper rather than the headline, matching the Play listing), the little things (a plain list), privacy and backup, "coming soon" |
 | `assets/screens/` | Real app screenshots, made by `workflow-app/scripts/make-store-assets.js --web assets/screens` from the store captures. Retake there, re-export here |
 | `help.html` | Help and guide: one page on the parts worth explaining (getting started, task states and All/Any, Today/To do/Map, dates and reminders, templates and sending, repeating, widget, backups). Linked from the nav, the footer and the app's Settings → Help and guide. Keep it in step with the app; use the app's own words (`workflow-app/src/labels.ts`) |
 | `privacy.html` | Privacy Policy. **Google Play requires its URL** for the listing |
 | `404.html` | GitHub Pages serves it for any missing URL, at any depth — so it uses absolute `/` paths |
 | `styles.css` | All styles. Brand tokens at the top as CSS custom properties |
-| `script.js` | Mobile menu, the nav border once scrolled, fade-ins. Stores nothing |
+| `script.js` | Mobile menu and the nav border once scrolled. Stores nothing |
 | `assets/favicon.svg` | The Zayvori mark on its gradient tile. Also used as the nav and footer logo |
 | `assets/apple-touch-icon.png`, `assets/og-image.png` | Rendered from the mark (180px; 1200×630 link preview) |
 | `assets/fonts/` | Self-hosted Space Grotesk (headings) and Inter (body), Latin-subset woff2, SIL Open Font License |
@@ -23,7 +23,8 @@ Static marketing and legal website for **Zayvori**, the Android to-do app where 
 - **Tokens are the app's exact values** (`workflow-app/src/theme.ts`): violet `#6A4DFF` → magenta `#C34DFF` gradient, mint `#2BD99F` ticks, done `#0FA97A`, ink `#12121F`, background `#F4F4F9`, dark `#0B0B13`. Change the app, change these.
 - **The mark** (a white Z-shaped route between two mint "done" ticks) is the same geometry as the app icon (`workflow-app/scripts/make-icons.js`) and in-app `BrandMark.tsx`. Change one, change all.
 - **Type:** Space Grotesk for names, headings and numbers; Inter for body. Self-hosted — never load from `fonts.googleapis.com` (it would send visitors' IPs to Google and break the privacy policy's no-third-parties line).
-- **Ration the color**, as the app does: gradient on primary buttons and the one highlighted word, violet for eyebrows and links, everything else neutral. The faint doodle pattern (`.doodles`) echoes the app's background pattern.
+- **Ration the color**, as the app does: gradient only on the logo tile and primary buttons; the highlighted word in the headline is solid violet (`.hl`), not gradient text; violet for links; everything else neutral. The faint doodle pattern (`.doodles`) is on the hero only.
+- **Don't look template-made** (November 2026: "it looks AI-generated"). Avoid the stock landing-page kit: a small uppercase label over every heading (only the hero's and Premium's remain), centered heading + subtitle + identical icon cards in every section (section heads are left-aligned; the smaller features are a plain two-column list, `.also`), scroll fade-ins (removed), a numbered "how it works" strip (removed), gradient text. Prefer specific, real examples (an AP exam, a move to Denver) over generic ones, and lively but plain headings. Still marketing: confident and concrete, not dull.
 - **Voice:** plain, upbeat, practical. **US English**, matching the app and the Play listing, in words as well as spelling: check off (not tick), come around (not round), a move (not moving house). A workflow is called a **plan** everywhere people read it (the app's Plans tab, "New plan"), since November 2026. Talk about getting things done and knowing what's next — not productivity jargon. Use the app's own words for concepts (Ready, Waiting, Not needed, "any one is enough", Finish) — see `workflow-app/src/labels.ts`.
 
 ## What the app does (keep copy aligned)
