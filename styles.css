@@ -346,8 +346,12 @@ p { margin: 0; }
 .notfound h1 { font-size: 40px; }
 .notfound p { color: var(--muted); margin: 12px 0 28px; }
 
+/* ---------- Scroll fade-in (script.js adds .in) ---------- */
+.fade { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.fade.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .fade { opacity: 1; transform: none; transition: none; }
   .notif { animation: none; }
 }
 
