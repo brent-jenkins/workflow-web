@@ -160,6 +160,14 @@ p { margin: 0; }
 .phone--small { width: 280px; margin: 0 auto; }
 .phone--night { box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08); }
 
+/* The tablet in landscape (#tablet): the same frame as the phones, wider. */
+.tablet {
+  max-width: 1040px; margin: 0 auto; padding: 14px; border-radius: 36px;
+  background: #1B1B28; box-shadow: var(--shadow-lg);
+}
+.tablet img { display: block; width: 100%; height: auto; border-radius: 24px; }
+@media (max-width: 600px) { .tablet { padding: 7px; border-radius: 20px; } .tablet img { border-radius: 14px; } }
+
 /* Floating "Mark complete" notification beside the phone. */
 .notif {
   /* Overlaps only the phone's bottom edge, so the map stays readable. */
