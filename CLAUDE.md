@@ -46,7 +46,7 @@ The site makes no third-party requests, which is what lets the privacy policy be
 
 ## Launch state and open items
 
-- **Pre-launch.** The app isn't on Google Play yet: the CTA is "Coming soon" with an email link. When it launches, swap the nav button, hero CTA and download card for the Play link (`https://play.google.com/store/apps/details?id=com.zayvori.workflow`).
+- **Live on Google Play since 20 November 2026** (`https://play.google.com/store/apps/details?id=com.zayvori.workflow`). The nav "Download" button on every page, the hero CTA and the download card's "Get it on Google Play" badge (`.store-badge`, drawn in CSS and inline SVG, so no third-party request) all link there, and index.html carries `SoftwareApplication` structured data with the same link.
 - **`support@zayvori.com` must exist** — it's the contact in the privacy policy, the help page and the CTA. It replaced hello@zayvori.com, which stopped working, in November 2026.
 - **Privacy policy "Who we are"** assumes the same setup as Damson Kitchen: an independent UK developer trading as Zayvori, no company. Confirm before submitting to Play. Not reviewed by a lawyer.
 
