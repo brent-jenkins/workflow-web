@@ -40,6 +40,17 @@ Not features (don't claim): accounts, automatic cloud sync, live sharing or coll
 
 **Selling, not describing:** lead with the outcome (only what you can do today) and a recognizable situation (moving, remodeling, events); show the before/after; mechanism words ("branch", "merge") come after.
 
+## Languages (since November 2026)
+
+The app speaks English, Spanish (Latin America's, for every country), Portuguese (Brazil's), French, German, Italian and Indonesian. The **help page** exists in all of them: `/help.html` and `/es/`, `/pt/`, `/fr/`, `/de/`, `/it/`, `/id/help.html`. The app opens the one in its own language (Settings → Help and guide).
+
+- **Edit `help-src/<lang>.html`, then run `python tools/make_help.py`**, never the generated help.html files. The script wraps each body in the shared header (with the globe language menu, `.nav__lang`, a `<details>`; script.js closes it on an outside tap or Escape), footer and head (canonical, `hreflang` alternates for every language plus `x-default` → English), and fails if any language's section anchors differ from English's. Anchors (`#getting-started`, `#dates`…) are never translated: the app may link to them.
+- Pages in a folder use absolute paths (`/styles.css`, `/assets/…`). Help in other languages links to the English privacy policy and terms, saying so.
+- Use the app's own words for every button and menu (the app's `src/i18n/<lang>.ts`): the help says what the screen says.
+- `sitemap.xml` lists every help page with `xhtml:link` alternates. A new language: a fragment, a line in `LANGS` and `CHROME` in make_help.py, the sitemap.
+- **Not yet translated:** the home page, privacy and terms. When the home pages come, add them the same way (and consider Damson Kitchen's arrival redirect by browser language, which stores nothing).
+- Written without native speakers, like the app: review alongside the app's tables.
+
 ## Analytics (since November 2026)
 
 Google Analytics 4 (`G-0JTQS1CLRC`, loaded directly with gtag.js, not through Tag Manager), in **Consent Mode**, chosen to see which marketing channels work (`analytics.js`, on every page before script.js). GA's setup wizard also made a Tag Manager container `GTM-WNPLFFJW` (under another Google account) holding the same ID; it isn't used. The app itself has no analytics; only the website does.

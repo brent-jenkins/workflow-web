@@ -19,6 +19,13 @@
     });
   }
 
+  // Language menu: a <details> opens itself; close it on an outside tap or Escape.
+  var lang = document.querySelector('.nav__lang');
+  if (lang) {
+    document.addEventListener('click', function (e) { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lang.open = false; });
+  }
+
   if (nav) {
     var onScroll = function () { nav.classList.toggle('nav--scrolled', window.scrollY > 8); };
     window.addEventListener('scroll', onScroll, { passive: true });

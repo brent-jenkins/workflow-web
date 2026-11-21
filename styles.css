@@ -122,10 +122,34 @@ p { margin: 0; }
 .nav__links a:not(.btn) { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 15px; }
 .nav__links a:not(.btn):hover { color: var(--ink); }
 .nav__hamburger { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
+
+/* The language menu (pages in more than one language): a <details>, so it opens without script. */
+.nav__links { margin-left: auto; }
+.nav__lang { position: relative; margin-left: 20px; }
+.nav__lang > summary {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px 6px 12px;
+  border: 1.5px solid var(--border); border-radius: 999px; background: var(--surface);
+  font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--violet);
+  cursor: pointer; list-style: none; user-select: none; transition: border-color .2s ease;
+}
+.nav__lang > summary::-webkit-details-marker { display: none; }
+.nav__lang > summary svg { width: 16px; height: 16px; }
+.nav__lang > summary .nav__lang-caret { width: 14px; height: 14px; transition: transform .2s ease; }
+.nav__lang[open] > summary .nav__lang-caret { transform: rotate(180deg); }
+.nav__lang > summary:hover, .nav__lang[open] > summary { border-color: var(--violet); }
+.nav__lang-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 210px; margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(18, 18, 31, .14); z-index: 120;
+}
+.nav__lang-menu a { display: block; padding: 10px 14px; border-radius: 10px; color: var(--ink); text-decoration: none; font-size: 15px; }
+.nav__lang-menu a:hover { background: var(--violet-soft); }
+.nav__lang-menu a[aria-current] { color: var(--violet); font-weight: 700; }
 .nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; border-radius: 2px; transition: .2s; }
 
 @media (max-width: 760px) {
   .nav__hamburger { display: block; }
+  .nav__lang { margin-left: auto; margin-right: 6px; }
   .nav__links {
     position: absolute; top: 72px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 4px;

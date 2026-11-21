@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://zayvori.com/</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://zayvori.com/help.html</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://zayvori.com/privacy.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url>
+    <loc>https://zayvori.com/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/es/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/pt/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/fr/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/de/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/it/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url>
+    <loc>https://zayvori.com/id/help.html</loc><lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zayvori.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://zayvori.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zayvori.com/pt/help.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zayvori.com/fr/help.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
+  </url>
+  <url><loc>https://zayvori.com/privacy.html</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://zayvori.com/terms.html</loc><lastmod>2026-11-09</lastmod></url>
 </urlset>
