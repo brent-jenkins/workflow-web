@@ -61,7 +61,7 @@ Google Analytics 4 (`G-0JTQS1CLRC`, loaded directly with gtag.js, not through Ta
 - In the GA property: data retention 14 months (the privacy policy says so), Google signals off.
 - Any other tracker, embed or externally hosted asset still changes the privacy policy — weigh that first.
 - **Site verification:** Pinterest's `p:domain_verify` meta tag is on the English home page (from make_pages.py, `verify`). It makes no requests; keep it, or Pinterest drops the claim.
-- **Social:** X (`https://x.com/zayvoriapp`) and TikTok (`https://www.tiktok.com/@zayvoriapp`), each a plain icon link in every footer (`.footer__social`, from make_pages.py; by hand in privacy.html and terms.html) and in the home page's `sameAs`. Never an embedded feed or follow button: those load X's scripts.
+- **Social:** X (`https://x.com/zayvoriapp`), TikTok (`https://www.tiktok.com/@zayvoriapp`) and Pinterest (`https://www.pinterest.com/zayvoriapp/`), each a plain icon link in every footer (`.footer__social`, from make_pages.py; by hand in privacy.html and terms.html) and in the home page's `sameAs`. Never an embedded feed or follow button: those load X's scripts.
 
 ## Launch state and open items
 
