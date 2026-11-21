@@ -1,5 +1,5 @@
 // Mobile menu, the nav's border once scrolled, and gentle fade-ins.
-// No tracking and nothing stored — see privacy.html.
+// Nothing stored here; analytics and the cookie choice are in analytics.js (see privacy.html).
 (function () {
   var nav = document.querySelector('.nav');
   var burger = document.querySelector('.nav__hamburger');
