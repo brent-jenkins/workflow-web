@@ -70,6 +70,9 @@
   function decide(value) {
     write('localStorage', CHOICE_KEY, value);
     gtag('consent', 'update', { analytics_storage: value });
+    // This page was only a cookieless ping until now, which reports don't
+    // show; counted properly once the visitor agrees.
+    if (value === 'granted') gtag('event', 'page_view');
     var b = document.querySelector('.consent');
     if (b) b.remove();
   }
