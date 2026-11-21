@@ -60,6 +60,7 @@ Google Analytics 4 (`G-0JTQS1CLRC`, loaded directly with gtag.js, not through Ta
 - **Campaign tags → Play:** `utm_*` in the landing URL are kept for the visit (sessionStorage) and added to every Google Play link as `referrer=…`, so Play Console → Store performance shows installs by source/campaign. Untagged visits pass `utm_source=zayvori.com&utm_medium=website`. Tag every marketing link (e.g. `?utm_source=reddit&utm_medium=social&utm_campaign=launch`).
 - In the GA property: data retention 14 months (the privacy policy says so), Google signals off.
 - Any other tracker, embed or externally hosted asset still changes the privacy policy — weigh that first.
+- **Social:** X is `https://x.com/zayvoriapp`, a plain icon link in every footer (`.footer__social`, from make_pages.py; by hand in privacy.html and terms.html) and in the home page's `sameAs`. Never an embedded feed or follow button: those load X's scripts.
 
 ## Launch state and open items
 
