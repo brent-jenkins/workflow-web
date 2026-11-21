@@ -1,5 +1,4 @@
-// Google Analytics 4 (through Google Tag Manager) in Consent Mode, and campaign
-// tags passed on to Google Play.
+// Google Analytics 4 in Consent Mode, and campaign tags passed on to Google Play.
 // See privacy.html ("This website") and CLAUDE.md ("Analytics").
 //
 // - Nothing is stored and no cookie is set until a visitor says yes in the
@@ -8,13 +7,14 @@
 // - Advertising signals are always off: Zayvori doesn't advertise with Google data.
 // - The choice is kept in localStorage ("zayvori-analytics": granted | denied);
 //   privacy.html has a button to change it.
-// - The tags themselves live in the Tag Manager container: only the Google tag
-//   for GA4 belongs there. Anything added to it must also go in privacy.html.
+// - Loaded directly (gtag.js), not through Tag Manager, so what runs is what's
+//   written here. The setup wizard also made a Tag Manager container
+//   (GTM-WNPLFFJW) holding this same ID; it isn't used.
 // - Campaign tags in the address (utm_source, utm_medium, utm_campaign…) are
 //   kept for the visit (sessionStorage) and added to every Google Play link as
 //   Play's install referrer, so Play Console reports installs per channel.
 (function () {
-  var CONTAINER_ID = 'GTM-WNPLFFJW'; // Google Tag Manager container (holds the GA4 tag)
+  var MEASUREMENT_ID = 'G-0JTQS1CLRC'; // the GA4 web stream for zayvori.com
   var CHOICE_KEY = 'zayvori-analytics';
   var UTM_KEY = 'zayvori-utm';
   var UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
@@ -38,7 +38,7 @@
   });
 
   // --- Google Analytics -----------------------------------------------------
-  if (!/^GTM-[A-Z0-9]{4,}$/.test(CONTAINER_ID)) return;
+  if (!/^G-[A-Z0-9]{6,}$/.test(MEASUREMENT_ID)) return;
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
@@ -52,20 +52,18 @@
     ad_personalization: 'denied',
   });
   gtag('set', 'ads_data_redaction', true);
-  gtag('set', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  gtag('js', new Date());
+  gtag('config', MEASUREMENT_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
 
-  // The standard Tag Manager loader, after the consent defaults above.
-  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
   var s = document.createElement('script');
   s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtm.js?id=' + CONTAINER_ID;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
   document.head.appendChild(s);
 
-  // Installs start with a tap on a Play link: pushed as the dataLayer event
-  // play_store_click (a GA4 event tag on it in Tag Manager sends it on).
+  // Installs start with a tap on a Play link: the event play_store_click.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="https://play.google.com/"]');
-    if (a) window.dataLayer.push({ event: 'play_store_click', link_text: (a.textContent || '').trim().slice(0, 40) });
+    if (a) gtag('event', 'play_store_click', { link_text: (a.textContent || '').trim().slice(0, 40) });
   });
 
   // --- The banner -------------------------------------------------------------
