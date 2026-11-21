@@ -42,10 +42,10 @@ Not features (don't claim): accounts, automatic cloud sync, live sharing or coll
 
 ## Analytics (since November 2026)
 
-Google Analytics 4, in **Consent Mode**, chosen to see which marketing channels work (`analytics.js`, on every page before script.js). The app itself has no analytics; only the website does.
+Google Analytics 4 through **Google Tag Manager** (container `GTM-WNPLFFJW`), in **Consent Mode**, chosen to see which marketing channels work (`analytics.js`, on every page before script.js). The container should hold only the Google tag for GA4 and a GA4 event tag on the `play_store_click` dataLayer event; anything else added there must go in privacy.html too. The app itself has no analytics; only the website does.
 
 - `analytics_storage` is denied until the visitor taps "That’s fine" in the banner (`.consent` in styles.css); before that, and after "No thanks", GA gets cookieless pings for modelled totals. Ad storage, ad user data, ad personalization and Google signals are always off. The choice is in localStorage (`zayvori-analytics`); privacy.html has a "change your cookie choice" link (`data-cookie-choice`).
-- Nothing loads until `MEASUREMENT_ID` holds a real GA4 web-stream ID. A tap on any Play link is the event `play_store_click`.
+- A tap on any Play link pushes `play_store_click` (with `link_text`) to the dataLayer.
 - **Campaign tags → Play:** `utm_*` in the landing URL are kept for the visit (sessionStorage) and added to every Google Play link as `referrer=…`, so Play Console → Store performance shows installs by source/campaign. Untagged visits pass `utm_source=zayvori.com&utm_medium=website`. Tag every marketing link (e.g. `?utm_source=reddit&utm_medium=social&utm_campaign=launch`).
 - In the GA property: data retention 14 months (the privacy policy says so), Google signals off.
 - Any other tracker, embed or externally hosted asset still changes the privacy policy — weigh that first.
