@@ -42,14 +42,14 @@ Not features (don't claim): accounts, automatic cloud sync, live sharing or coll
 
 ## Languages (since November 2026)
 
-The app speaks English, Spanish (Latin America's, for every country), Portuguese (Brazil's), French, German, Italian and Indonesian. The **help page** exists in all of them: `/help.html` and `/es/`, `/pt/`, `/fr/`, `/de/`, `/it/`, `/id/help.html`. The app opens the one in its own language (Settings → Help and guide).
+The app speaks English, Spanish (Latin America's, for every country), Portuguese (Brazil's), French, German, Italian and Indonesian, and so does the site's **home page** (`/`, `/es/`, `/pt/`, `/fr/`, `/de/`, `/it/`, `/id/`) and **help page** (`/help.html`, `/es/help.html`…). The app opens the help page in its own language (Settings → Help and guide). Privacy and terms are English only; the other languages link to them saying so.
 
-- **Edit `help-src/<lang>.html`, then run `python tools/make_help.py`**, never the generated help.html files. The script wraps each body in the shared header (with the globe language menu, `.nav__lang`, a `<details>`; script.js closes it on an outside tap or Escape), footer and head (canonical, `hreflang` alternates for every language plus `x-default` → English), and fails if any language's section anchors differ from English's. Anchors (`#getting-started`, `#dates`…) are never translated: the app may link to them.
-- Pages in a folder use absolute paths (`/styles.css`, `/assets/…`). Help in other languages links to the English privacy policy and terms, saying so.
-- Use the app's own words for every button and menu (the app's `src/i18n/<lang>.ts`): the help says what the screen says.
-- `sitemap.xml` lists every help page with `xhtml:link` alternates. A new language: a fragment, a line in `LANGS` and `CHROME` in make_help.py, the sitemap.
-- **Not yet translated:** the home page, privacy and terms. When the home pages come, add them the same way (and consider Damson Kitchen's arrival redirect by browser language, which stores nothing).
+- **Edit `home-src/<lang>.html` (the home page's `<main>`) or `help-src/<lang>.html` (the help body), then run `python tools/make_pages.py`.** Never edit the generated index.html / help.html files, English included. The script adds the shared head (canonical, `hreflang` alternates for every language plus `x-default` → English, Open Graph with `og:locale` alternates, and the home page's `SoftwareApplication` data with `inLanguage`), the header with the globe language menu (`.nav__lang`, a `<details>`; script.js closes it on an outside tap or Escape), the footer and scripts, and writes **sitemap.xml** with `xhtml:link` alternates. It fails if a language's section anchors differ from English's. Anchors are never translated: the app may link to them.
+- **Arrival redirect** (English pages only, inline in the head): a visitor arriving from outside the site whose browser's first language is one of the others goes to that language's page, keeping the query (campaign tags) and the #section; `?lang=en` stops it. Reads the browser language and the referrer; stores nothing. Crawlers browse in English and stay put.
+- Pages in a folder use absolute paths (`/styles.css`, `/assets/…`). The screenshots are the English app; their alt text says so. Prices are shown in US dollars with "local prices vary".
+- Use the app's own words for every button and menu (`src/i18n/<lang>.ts` in the app). When English copy changes, change every language's fragment.
 - Written without native speakers, like the app: review alongside the app's tables.
+- A new language: both fragments, a line in `LANGS` and `C` in make_pages.py, the redirect list follows automatically.
 
 ## Analytics (since November 2026)
 
