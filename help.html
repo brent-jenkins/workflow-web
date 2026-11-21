@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>/* Visitors from outside the site whose browser prefers another of our languages go to it; ?lang=en stops this. Stores nothing (tools/make_pages.py). */(function(){try{var q=new URLSearchParams(location.search);if(q.get('lang')==='en')return;if(document.referrer&&new URL(document.referrer).host===location.host)return;var l=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase().split('-')[0];if(l==='in')l='id';if(['es', 'pt', 'fr', 'de', 'it', 'id'].indexOf(l)<0)return;location.replace('/'+l+(location.pathname==='/index.html'?'/':location.pathname)+location.search+location.hash);}catch(e){}})();</script>
+  <script>/* Visitors from outside the site whose browser prefers another of our languages go to it; ?lang=en stops this. Stores nothing (tools/make_pages.py). */(function(){try{var q=new URLSearchParams(location.search);if(q.get('lang')==='en')return;if(document.referrer&&new URL(document.referrer).host===location.host)return;var t=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase(),l=t.split('-')[0];if(l==='in')l='id';if(l==='zh')l=/hant|-tw|-hk|-mo/.test(t)?'zh-hant':'';if(['es', 'pt', 'fr', 'de', 'it', 'id', 'ja', 'zh-hant'].indexOf(l)<0)return;location.replace('/'+l+(location.pathname==='/index.html'?'/':location.pathname)+location.search+location.hash);}catch(e){}})();</script>
   <title>Help and guide — Zayvori</title>
   <meta name="description" content="How Zayvori works: plans, Today, the map, due dates and reminders, templates, repeating plans, the widget and backups." />
   <link rel="canonical" href="https://zayvori.com/help.html" />
@@ -14,6 +14,8 @@
   <link rel="alternate" hreflang="de" href="https://zayvori.com/de/help.html" />
   <link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
   <link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
+  <link rel="alternate" hreflang="ja" href="https://zayvori.com/ja/help.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://zayvori.com/zh-hant/help.html" />
   <link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
   <meta name="theme-color" content="#6A4DFF" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -45,6 +47,8 @@
           <li><a href="/de/help.html" lang="de" hreflang="de">Deutsch</a></li>
           <li><a href="/it/help.html" lang="it" hreflang="it">Italiano</a></li>
           <li><a href="/id/help.html" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ja/help.html" lang="ja" hreflang="ja">日本語</a></li>
+          <li><a href="/zh-hant/help.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li>
         </ul>
       </details>
       <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">

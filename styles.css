@@ -71,6 +71,8 @@ p { margin: 0; }
 .section__head h2 { font-size: clamp(30px, 4vw, 42px); margin-top: 10px; }
 .section__head p { color: var(--muted); margin-top: 14px; font-size: 18px; }
 .hl { color: var(--violet); }
+/* Japanese and Chinese break lines between any two characters: keep the highlighted phrase ("次の一歩") whole. */
+:lang(ja) .hl, :lang(zh) .hl { white-space: nowrap; }
 
 /* Faint app-themed doodles behind light bands, like the app's background pattern. */
 .doodles {

@@ -38,6 +38,8 @@ LANGS = [
     ('de', 'de', 'de', 'de', 'de_DE', 'Deutsch', 'DE'),
     ('it', 'it', 'it', 'it', 'it_IT', 'Italiano', 'IT'),
     ('id', 'id', 'id', 'id', 'id_ID', 'Bahasa Indonesia', 'ID'),
+    ('ja', 'ja', 'ja', 'ja', 'ja_JP', '日本語', 'JA'),
+    ('zh-hant', 'zh-hant', 'zh-Hant', 'zh-Hant', 'zh_TW', '繁體中文', '繁'),
 ]
 
 C = {
@@ -104,6 +106,24 @@ C = {
         ld_desc='Aplikasi tugas untuk pekerjaan besar: tugas yang menunggu tugas lain, berjalan berdampingan, atau menawarkan alternatif, jadi Anda hanya melihat langkah berikutnya. Tanpa akun, bisa offline, dan rencana Anda tetap di ponsel.',
         help_title='Bantuan dan panduan — Zayvori', help_desc='Cara kerja Zayvori: rencana, Hari ini, peta, jatuh tempo dan pengingat, template, rencana berulang, widget, dan cadangan.',
         help_eyebrow='Bantuan', help_h1='Cara kerja Zayvori', help_sub='Panduan singkat tentang hal-hal yang perlu diketahui.'),
+    'ja': dict(
+        why='Zayvori の特長', templates='テンプレート', describe='ことばで作成', premium='Premium', help='ヘルプ', download='ダウンロード',
+        privacy='プライバシーポリシー（英語）', terms='利用規約（英語）', home='Zayvori — ホーム', menu='メニューを開く', language='言語',
+        home_title='Zayvori — 大きな用事も、次の一歩から',
+        home_desc='引っ越し、リフォーム、イベントの準備。Zayvori はどのタスクがほかのタスクを待つかを把握し、今日できることだけを表示します。アカウント不要、オフラインで使え、プランは端末の中に。Zayvori Premium ならAIで計画。Google Play で無料。',
+        og_desc='どのタスクが何を待っているかを把握し、今日できることだけを見せるToDoアプリ。Google Play で無料。',
+        ld_desc='大きな用事のためのToDoアプリ。ほかを待つタスク、並行するタスク、選べる代替案を扱い、今日できる次のステップだけを表示します。アカウント不要、オフラインで使え、プランは端末の中に保存されます。',
+        help_title='ヘルプとガイド — Zayvori', help_desc='Zayvori の使い方：プラン、今日、マップ、期限とリマインダー、テンプレート、繰り返すプラン、ウィジェット、バックアップ。',
+        help_eyebrow='ヘルプ', help_h1='Zayvori の使い方', help_sub='知っておきたいポイントの簡単なガイドです。'),
+    'zh-hant': dict(
+        why='為什麼選 Zayvori', templates='範本', describe='描述建立', premium='Premium', help='說明', download='下載',
+        privacy='隱私權政策（英文）', terms='使用條款（英文）', home='Zayvori — 首頁', menu='開啟選單', language='語言',
+        home_title='Zayvori — 大事情，從下一步開始',
+        home_desc='搬家、裝修、籌辦活動：Zayvori 知道哪些任務要等其他任務，讓你只看到今天能做的事。不需帳號、離線可用，計畫只存在你的手機。Zayvori Premium 還能用 AI 規劃。在 Google Play 免費下載。',
+        og_desc='一款知道哪些事要等哪些事的待辦 App，只顯示你今天能做的。在 Google Play 免費下載。',
+        ld_desc='適合大事情的待辦 App：任務可以等待其他任務、並行進行或提供替代方案，讓你只看到今天能做的下一步。不需帳號、離線可用，計畫只存在你的手機。',
+        help_title='說明與指南 — Zayvori', help_desc='Zayvori 的使用方式：計畫、今天、地圖、期限和提醒、範本、重複的計畫、小工具和備份。',
+        help_eyebrow='說明', help_h1='Zayvori 如何運作', help_sub='值得知道的重點，簡短說明。'),
 }
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" '
@@ -115,7 +135,8 @@ OTHERS = [l[0] for l in LANGS if l[0] != 'en']
 REDIRECT = ('  <script>/* Visitors from outside the site whose browser prefers another of our languages go to it; ?lang=en stops this. Stores nothing (tools/make_pages.py). */'
             "(function(){try{var q=new URLSearchParams(location.search);if(q.get('lang')==='en')return;"
             "if(document.referrer&&new URL(document.referrer).host===location.host)return;"
-            "var l=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase().split('-')[0];if(l==='in')l='id';"
+            "var t=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase(),l=t.split('-')[0];if(l==='in')l='id';"
+            "if(l==='zh')l=/hant|-tw|-hk|-mo/.test(t)?'zh-hant':'';"
             f"if({OTHERS!r}.indexOf(l)<0)return;"
             "location.replace('/'+l+(location.pathname==='/index.html'?'/':location.pathname)+location.search+location.hash);}catch(e){}})();</script>\n")
 
