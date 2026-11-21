@@ -243,6 +243,9 @@ def head(kind, code, folder, html_lang, og_locale):
   </script>'''
     font = '\n  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />' if kind == 'home' else ''
     redirect = REDIRECT if code == 'en' else ''
+    # Site ownership checks: inert meta tags, no requests. Pinterest reads the home page.
+    verify = '  <meta name="p:domain_verify" content="114b1fce8092e500bb66a118ced883cd" />
+' if (kind == 'home' and code == 'en') else ''
     return f'''<!DOCTYPE html>
 <html lang="{html_lang}">
 <head>
@@ -250,7 +253,7 @@ def head(kind, code, folder, html_lang, og_locale):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 {redirect}  <title>{title}</title>
   <meta name="description" content="{desc}" />
-  <link rel="canonical" href="{SITE}{url(kind, folder)}" />
+{verify}  <link rel="canonical" href="{SITE}{url(kind, folder)}" />
 {alternates}
   <meta name="theme-color" content="#6A4DFF" />{og}
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
