@@ -33,7 +33,7 @@ TODAY = '2026-11-22'
 LANGS = [
     ('en', '', 'en', 'en', 'en_US', 'English', 'EN'),
     ('es', 'es', 'es-419', 'es', 'es_LA', 'Español', 'ES'),
-    ('pt', 'pt', 'pt-BR', 'pt', 'pt_BR', 'Português (Brasil)', 'PT'),
+    ('pt', 'pt', 'pt-BR', 'pt', 'pt_BR', 'Português', 'PT'),
     ('fr', 'fr', 'fr', 'fr', 'fr_FR', 'Français', 'FR'),
     ('de', 'de', 'de', 'de', 'de_DE', 'Deutsch', 'DE'),
     ('it', 'it', 'it', 'it', 'it_IT', 'Italiano', 'IT'),
