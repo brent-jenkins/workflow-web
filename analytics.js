@@ -17,8 +17,11 @@
   var params = new URLSearchParams(window.location.search);
   var tags = UTM_PARAMS.filter(function (p) { return params.get(p); });
   var utm = tags.map(function (p) { return p + '=' + encodeURIComponent(params.get(p)); }).join('&');
-  // Visits with no tags still say they came through the website.
+  // Visits with no tags still say they came through the website. Play's
+  // reports break installs down by source and campaign, so a campaign is
+  // always sent.
   var referrer = utm || 'utm_source=zayvori.com&utm_medium=website';
+  if (!params.get('utm_campaign')) referrer += '&utm_campaign=website';
 
   document.querySelectorAll('a[href]').forEach(function (a) {
     var url;
