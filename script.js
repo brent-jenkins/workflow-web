@@ -45,3 +45,20 @@
   }, { rootMargin: '0px 0px -60px 0px' });
   fades.forEach(function (el) { io.observe(el); });
 })();
+
+// Demo videos (.demo-video): silent loops that play only while on screen. With
+// "reduce motion" set on the device they stay paused, with controls to play by hand.
+(function () {
+  var videos = document.querySelectorAll('.demo-video');
+  if (!videos.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  videos.forEach(function (v) {
+    if (reduce) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; return; }
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+      });
+    }).observe(v);
+  });
+})();

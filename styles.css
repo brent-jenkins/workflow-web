@@ -186,6 +186,7 @@ p { margin: 0; }
   background: #1B1B28; box-shadow: var(--shadow-lg);
 }
 .phone img { width: 100%; height: auto; border-radius: 34px; }
+.phone video { display: block; width: 100%; height: auto; border-radius: 34px; background: #1B1B28; }
 .phone--small { width: 280px; margin: 0 auto; }
 .phone--night { box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08); }
 
