@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>/* Visitors from outside the site whose browser prefers another of our languages go to it; ?lang=en stops this. Stores nothing (tools/make_pages.py). */(function(){try{var q=new URLSearchParams(location.search);if(q.get('lang')==='en')return;if(document.referrer&&new URL(document.referrer).host===location.host)return;var t=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase(),l=t.split('-')[0];if(l==='in')l='id';if(l==='zh')l=/hant|-tw|-hk|-mo/.test(t)?'zh-hant':'';if(['es', 'pt', 'fr', 'de', 'it', 'id', 'ja', 'zh-hant'].indexOf(l)<0)return;location.replace('/'+l+(location.pathname==='/index.html'?'/':location.pathname)+location.search+location.hash);}catch(e){}})();</script>
+  <script>/* Visitors from outside the site whose browser prefers another of our languages go to it; ?lang=en stops this. Stores nothing (tools/make_pages.py). */(function(){try{var q=new URLSearchParams(location.search);if(q.get('lang')==='en')return;if(document.referrer&&new URL(document.referrer).host===location.host)return;var t=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase(),l=t.split('-')[0];if(l==='in')l='id';if(l==='zh')l=/hant|-tw|-hk|-mo/.test(t)?'zh-hant':'';if(['es', 'pt', 'fr', 'de', 'it', 'id', 'ja', 'ko', 'zh-hant'].indexOf(l)<0)return;location.replace('/'+l+(location.pathname==='/index.html'?'/':location.pathname)+location.search+location.hash);}catch(e){}})();</script>
   <title>Help and guide — Zayvori</title>
   <meta name="description" content="How Zayvori works: plans, Today, the map, due dates and reminders, templates, repeating plans, the widget and backups." />
   <link rel="canonical" href="https://zayvori.com/help.html" />
@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="it" href="https://zayvori.com/it/help.html" />
   <link rel="alternate" hreflang="id" href="https://zayvori.com/id/help.html" />
   <link rel="alternate" hreflang="ja" href="https://zayvori.com/ja/help.html" />
+  <link rel="alternate" hreflang="ko" href="https://zayvori.com/ko/help.html" />
   <link rel="alternate" hreflang="zh-Hant" href="https://zayvori.com/zh-hant/help.html" />
   <link rel="alternate" hreflang="x-default" href="https://zayvori.com/help.html" />
   <meta name="theme-color" content="#6A4DFF" />
@@ -48,6 +49,7 @@
           <li><a href="/it/help.html" lang="it" hreflang="it">Italiano</a></li>
           <li><a href="/id/help.html" lang="id" hreflang="id">Bahasa Indonesia</a></li>
           <li><a href="/ja/help.html" lang="ja" hreflang="ja">日本語</a></li>
+          <li><a href="/ko/help.html" lang="ko" hreflang="ko">한국어</a></li>
           <li><a href="/zh-hant/help.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li>
         </ul>
       </details>
@@ -160,7 +162,7 @@
           <p>To restore it, on the same phone or a new one, choose <strong>Restore</strong> and pick the file. <strong>Add to what’s here</strong> keeps what’s already on the phone and adds what’s missing. <strong>Replace everything</strong> swaps it all for the backup.</p>
 
           <h2 id="language">Language</h2>
-          <p>Zayvori follows your phone’s language: English, Spanish, Portuguese, French, German, Italian, Indonesian, Japanese or Traditional Chinese, and English for any other. To choose one yourself, go to <strong>Settings → Language</strong>. On Android 13 and later you can also set it in your phone’s settings, under Apps → Zayvori → Language.</p>
+          <p>Zayvori follows your phone’s language: English, Spanish, Portuguese, French, German, Italian, Indonesian, Japanese, Korean or Traditional Chinese, and English for any other. To choose one yourself, go to <strong>Settings → Language</strong>. On Android 13 and later you can also set it in your phone’s settings, under Apps → Zayvori → Language.</p>
           <p>Your plans keep the words they were written in: changing the language changes Zayvori’s own words, not your tasks. Describe it writes in the language you use, and can write a plan in another language if you ask, such as “in Spanish”.</p>
 
           <h2>Still stuck?</h2>

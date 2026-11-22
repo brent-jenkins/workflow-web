@@ -72,7 +72,9 @@ p { margin: 0; }
 .section__head p { color: var(--muted); margin-top: 14px; font-size: 18px; }
 .hl { color: var(--violet); }
 /* Japanese and Chinese break lines between any two characters: keep the highlighted phrase ("次の一歩") whole. */
-:lang(ja) .hl, :lang(zh) .hl { white-space: nowrap; }
+:lang(ja) .hl, :lang(zh) .hl, :lang(ko) .hl { white-space: nowrap; }
+/* Korean breaks lines between words, not inside them. */
+:lang(ko) { word-break: keep-all; overflow-wrap: break-word; }
 
 /* Faint app-themed doodles behind light bands, like the app's background pattern. */
 .doodles {

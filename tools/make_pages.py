@@ -39,6 +39,7 @@ LANGS = [
     ('it', 'it', 'it', 'it', 'it_IT', 'Italiano', 'IT'),
     ('id', 'id', 'id', 'id', 'id_ID', 'Bahasa Indonesia', 'ID'),
     ('ja', 'ja', 'ja', 'ja', 'ja_JP', '日本語', 'JA'),
+    ('ko', 'ko', 'ko', 'ko', 'ko_KR', '한국어', 'KO'),
     ('zh-hant', 'zh-hant', 'zh-Hant', 'zh-Hant', 'zh_TW', '繁體中文', '繁'),
 ]
 
@@ -115,6 +116,15 @@ C = {
         ld_desc='大きな用事のためのToDoアプリ。ほかを待つタスク、並行するタスク、選べる代替案を扱い、今日できる次のステップだけを表示します。アカウント不要、オフラインで使え、プランは端末の中に保存されます。',
         help_title='ヘルプとガイド — Zayvori', help_desc='Zayvori の使い方：プラン、今日、マップ、期限とリマインダー、テンプレート、繰り返すプラン、ウィジェット、バックアップ。',
         help_eyebrow='ヘルプ', help_h1='Zayvori の使い方', help_sub='知っておきたいポイントの簡単なガイドです。'),
+    'ko': dict(
+        why='왜 Zayvori인가요', templates='템플릿', describe='말로 만들기', premium='Premium', help='도움말', download='다운로드',
+        privacy='개인정보처리방침(영어)', terms='이용약관(영어)', home='Zayvori — 홈', menu='메뉴 열기', language='언어',
+        home_title='Zayvori — 큰 일도 다음 한 걸음부터',
+        home_desc='이사, 리모델링, 행사 준비. Zayvori는 어떤 작업이 다른 작업을 기다리는지 알아서, 오늘 할 수 있는 일만 보여 줘요. 계정 필요 없음, 오프라인 사용, 플랜은 휴대전화 안에만. Zayvori Premium으로 AI와 계획하세요. Google Play에서 무료.',
+        og_desc='무엇이 무엇을 기다리는지 알아서 오늘 할 수 있는 일만 보여 주는 할 일 앱. Google Play에서 무료.',
+        ld_desc='큰 일을 위한 할 일 앱: 다른 작업을 기다리는 작업, 나란히 진행되는 작업, 고를 수 있는 대안을 다루고, 오늘 할 수 있는 다음 단계만 보여 줘요. 계정 필요 없음, 오프라인 사용, 플랜은 휴대전화 안에만 저장돼요.',
+        help_title='도움말과 안내 — Zayvori', help_desc='Zayvori 사용법: 플랜, 오늘, 지도, 마감일과 알림, 템플릿, 반복하는 플랜, 위젯, 백업.',
+        help_eyebrow='도움말', help_h1='Zayvori 사용법', help_sub='알아 두면 좋은 내용을 짧게 정리했어요.'),
     'zh-hant': dict(
         why='為什麼選 Zayvori', templates='範本', describe='描述建立', premium='Premium', help='說明', download='下載',
         privacy='隱私權政策（英文）', terms='使用條款（英文）', home='Zayvori — 首頁', menu='開啟選單', language='語言',
