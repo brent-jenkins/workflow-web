@@ -392,6 +392,36 @@ p { margin: 0; }
 .legal__body h2[id] { scroll-margin-top: 90px; }
 @media (max-width: 600px) { .help__toc { grid-template-columns: 1fr; } }
 
+/* ---------- Press kit (press.html) ---------- */
+.press__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.legal__body--wide { max-width: 980px; }
+.legal__body h3.press__label { font-size: 15px; color: var(--muted); margin: 22px 0 8px; letter-spacing: 0; }
+.copy { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; }
+.copy p { color: var(--ink) !important; }
+.facts { display: grid; grid-template-columns: 150px 1fr; gap: 10px 24px; margin: 0; }
+.facts dt { font-family: var(--display); font-weight: 600; }
+.facts dd { margin: 0; color: #3A3A4E; font-size: 16px; }
+.press__points li + li { margin-top: 8px; }
+.press__video { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; }
+.press__video .phone--small { width: 220px; }
+.press__video p + p { margin-top: 12px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 24px 20px; margin-top: 18px; }
+.shots figure, .shots__wide, .logos figure { margin: 0; }
+.shots img, .shots__wide img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--border); }
+.shots__wide { margin-top: 24px; }
+.shots figcaption, .shots__wide figcaption, .logos figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+.logos { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; margin: 18px 0; }
+.logos img { width: 120px; height: 120px; border-radius: 26px; }
+.logos__wide img { width: 300px; height: auto; border-radius: 12px; }
+@media (max-width: 600px) {
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 10px; }
+  .press__video { grid-template-columns: 1fr; }
+  .press__video .phone--small { margin: 0 auto; }
+  .shots { grid-template-columns: 1fr 1fr; }
+  .logos__wide img { width: 100%; }
+}
+
 /* ---------- 404 ---------- */
 .notfound { min-height: 60vh; display: grid; place-items: center; text-align: center; padding: 80px 24px; }
 .notfound img { width: 88px; margin: 0 auto 24px; border-radius: 22px; }
