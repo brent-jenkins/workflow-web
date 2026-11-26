@@ -405,21 +405,29 @@ p { margin: 0; }
 .press__video { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; }
 .press__video .phone--small { width: 220px; }
 .press__video p + p { margin-top: 12px; }
-.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 24px 20px; margin-top: 18px; }
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 20px; margin-top: 18px; }
 .shots figure, .shots__wide, .logos figure { margin: 0; }
 .shots img, .shots__wide img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--border); }
 .shots__wide { margin-top: 24px; }
 .shots figcaption, .shots__wide figcaption, .logos figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
 .logos { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; margin: 18px 0; }
+.logos figure { width: 140px; }
+.logos figure.logos__wide { width: 300px; }
 .logos img { width: 120px; height: 120px; border-radius: 26px; }
-.logos__wide img { width: 300px; height: auto; border-radius: 12px; }
+.logos__wide img { width: 100%; height: auto; border-radius: 12px; }
 @media (max-width: 600px) {
+  /* Phones: no card, so the screenshots get the whole width; the description boxes turn white to stand out from the page. */
+  .legal__body--wide { background: none; border: 0; padding: 0; }
+  .legal__body--wide .copy { background: var(--surface); }
+  .press__actions .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
   .facts { grid-template-columns: 1fr; gap: 2px; }
   .facts dd { margin-bottom: 10px; }
   .press__video { grid-template-columns: 1fr; }
   .press__video .phone--small { margin: 0 auto; }
-  .shots { grid-template-columns: 1fr 1fr; }
-  .logos__wide img { width: 100%; }
+  .shots { grid-template-columns: 1fr 1fr; gap: 20px 14px; }
+  .logos { gap: 20px 14px; }
+  .logos figure { width: calc(50% - 7px); }
+  .logos figure.logos__wide { width: 100%; }
 }
 
 /* ---------- 404 ---------- */
